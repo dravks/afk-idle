@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="HeroData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/HeroData.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="2"]
+[ext_resource type="Resource" path="res://data/skills/basic_hit.tres" id="3"]
+[ext_resource type="Resource" path="res://data/skills/mage_storm.tres" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "mage"
+hero_name = "Shadow Mage"
+faction = 3
+role = 3
+damage_type = 1
+base_hp = 400.0
+base_atk = 80.0
+base_def = 6.0
+base_haste = 100.0
+crit_chance = 0.1
+crit_multiplier = 1.5
+attack_range = 500.0
+basic_attack = ExtResource("3")
+ultimate_skill = ExtResource("4")

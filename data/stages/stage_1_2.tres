@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StageData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/StageData.gd" id="1"]
+[ext_resource type="Resource" path="res://data/heroes/orc.tres" id="2"]
+[ext_resource type="Resource" path="res://data/heroes/goblin.tres" id="3"]
+[ext_resource type="Resource" path="res://data/heroes/wolf.tres" id="4"]
+
+[resource]
+script = ExtResource("1")
+stage_id = "1-2"
+stage_number = 2
+enemy_front_top = ExtResource("2")
+enemy_front_bot = ExtResource("3")
+enemy_back_top = ExtResource("4")
+enemy_back_mid = ExtResource("3")
+enemy_back_bot = ExtResource("4")
+enemy_team_level = 2
+first_clear_gold = 800
+first_clear_diamonds = 150

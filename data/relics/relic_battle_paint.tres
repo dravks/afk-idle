@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RelicData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/RelicData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "relic_battle_paint"
+relic_name = "Savaş Boyaları"
+description = "Takımın ATK ve DEF'i %20 artar."
+rarity = 0
+effect_type = 0
+effect_value = 0.2

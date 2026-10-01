@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/BuffData.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_rage"]
+script = ExtResource("2")
+id = "brutus_rage_buff"
+buff_type = 0
+duration = 8.0
+tick_interval = 0.0
+value_percentage = 0.5
+flat_value = 0.0
+
+[resource]
+script = ExtResource("1")
+id = "brutus_rage"
+skill_name = "Öfke"
+skill_type = 2
+target_rule = 6
+damage_type = 0
+damage_multiplier = 0.0
+cooldown = 0.0
+energy_cost = 1000
+energy_generated = 0
+range = 0.0
+aoe_radius = 0.0
+description = "Ulti: 8sn %50 saldiri gucu."
+applied_buffs = Array[ExtResource("2")]([SubResource("Resource_rage")])

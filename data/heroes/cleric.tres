@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="HeroData" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/HeroData.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="2"]
+[ext_resource type="Resource" path="res://data/skills/basic_hit.tres" id="3"]
+[ext_resource type="Resource" path="res://data/skills/cleric_bolt.tres" id="4"]
+[ext_resource type="Resource" path="res://data/skills/cleric_mend.tres" id="5"]
+
+[resource]
+script = ExtResource("1")
+id = "cleric"
+hero_name = "Cleric"
+faction = 2
+role = 4
+damage_type = 1
+base_hp = 350.0
+base_atk = 40.0
+base_def = 8.0
+base_haste = 100.0
+crit_chance = 0.05
+crit_multiplier = 1.5
+attack_range = 300.0
+basic_attack = ExtResource("3")
+active_skills = Array[ExtResource("2")]([ExtResource("4")])
+ultimate_skill = ExtResource("5")

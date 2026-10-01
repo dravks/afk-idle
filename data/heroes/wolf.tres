@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="HeroData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/HeroData.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="2"]
+[ext_resource type="Resource" path="res://data/skills/basic_hit.tres" id="3"]
+[ext_resource type="Resource" path="res://data/skills/gob_smash.tres" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "wolf"
+hero_name = "Wolf"
+faction = 2
+role = 1
+damage_type = 0
+base_hp = 280.0
+base_atk = 60.0
+base_def = 4.0
+base_haste = 120.0
+crit_chance = 0.15
+crit_multiplier = 1.5
+attack_range = 100.0
+basic_attack = ExtResource("3")
+ultimate_skill = ExtResource("4")

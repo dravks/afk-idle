@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="HeroData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/HeroData.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="2"]
+[ext_resource type="Resource" path="res://data/skills/basic_hit.tres" id="3"]
+[ext_resource type="Resource" path="res://data/skills/rowan_potion_rain.tres" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "rowan"
+hero_name = "Rowan"
+faction = 0
+role = 4
+damage_type = 1
+base_hp = 420.0
+base_atk = 45.0
+base_def = 9.0
+base_haste = 100.0
+crit_chance = 0.05
+crit_multiplier = 1.5
+attack_range = 300.0
+basic_attack = ExtResource("3")
+ultimate_skill = ExtResource("4")

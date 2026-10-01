@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StageData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/StageData.gd" id="1"]
+[ext_resource type="Resource" path="res://data/heroes/goblin.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+stage_id = "1-1"
+stage_number = 1
+enemy_front_top = ExtResource("2")
+enemy_front_bot = ExtResource("2")
+enemy_back_top = ExtResource("2")
+enemy_back_mid = ExtResource("2")
+enemy_back_bot = ExtResource("2")
+enemy_team_level = 1
+first_clear_gold = 500
+first_clear_diamonds = 100

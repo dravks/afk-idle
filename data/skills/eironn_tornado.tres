@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "eironn_tornado"
+skill_name = "Hortum"
+skill_type = 2
+target_rule = 4
+damage_type = 0
+damage_multiplier = 2.2
+cooldown = 0.0
+energy_cost = 1000
+energy_generated = 0
+range = 0.0
+aoe_radius = 0.0
+description = "Ulti: tum dusmanlara %220 hasar."

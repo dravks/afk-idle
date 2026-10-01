@@ -1,0 +1,15 @@
+# Godot engine cache — regenerable, never commit
+.godot/
+
+# Export output (created on export)
+/export/
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / tool leftovers
+*~
+*.tmp
+*.log

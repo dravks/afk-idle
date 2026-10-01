@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "dragon_bite"
+skill_name = "Ezici Isirik"
+skill_type = 0
+target_rule = 0
+damage_type = 0
+damage_multiplier = 1.0
+cooldown = 0.0
+energy_cost = 0
+energy_generated = 100
+range = 200.0
+aoe_radius = 0.0
+description = "Temel saldiri."

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CommanderSpellData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/CommanderSpellData.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/BuffData.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_slow"]
+script = ExtResource("2")
+buff_id = "time_warp_slow"
+buff_name = "Zaman Yavaşlaması"
+buff_type = 2
+duration = 3.5
+tick_interval = 0.0
+value_percentage = -0.5
+flat_value = 0.0
+
+[resource]
+script = ExtResource("1")
+id = "time_warp"
+spell_name = "Zaman Bükme"
+mana_cost = 40
+cooldown = 10.0
+aoe_radius = 160.0
+target_type = "AREA_ENEMY"
+base_power = 0.0
+damage_mult = 0.0
+damage_type = 1
+applied_buff = SubResource("Resource_slow")

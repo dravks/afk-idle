@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/BossData.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="2"]
+[ext_resource type="Resource" path="res://data/skills/dragon_bite.tres" id="3"]
+[ext_resource type="Resource" path="res://data/skills/dragon_cataclysm.tres" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "dragon"
+hero_name = "Kadim Ejderha"
+faction = 5
+role = 1
+damage_type = 0
+base_hp = 40000.0
+base_atk = 800.0
+base_def = 200.0
+base_haste = 100.0
+crit_chance = 0.05
+crit_multiplier = 1.5
+attack_range = 200.0
+basic_attack = ExtResource("3")
+boss_title = "Kadim Ejderha / Ancient Dragon"
+is_immune_to_cc = true
+enrage_interval = 20.0
+enrage_skill = ExtResource("4")

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/SkillData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "striker_slash"
+skill_name = "Kesik"
+skill_type = 1
+target_rule = 0
+damage_type = 0
+damage_multiplier = 2.0
+cooldown = 5.0
+energy_cost = 0
+energy_generated = 100
+range = 120.0
+aoe_radius = 0.0
+description = "En yakin dusmana %200 hasar."

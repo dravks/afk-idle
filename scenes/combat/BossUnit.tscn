@@ -1,0 +1,106 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/BossUnit.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/combat/StatsComponent.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/combat/TargetingComponent.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/combat/fsm/StateMachine.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/combat/fsm/states/IdleState.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/combat/fsm/states/MoveState.gd" id="6"]
+[ext_resource type="Script" path="res://scripts/combat/fsm/states/AttackState.gd" id="7"]
+[ext_resource type="Script" path="res://scripts/combat/fsm/states/DeadState.gd" id="8"]
+[ext_resource type="Script" path="res://scripts/combat/fsm/states/SkillState.gd" id="9"]
+[ext_resource type="Script" path="res://scripts/combat/fsm/states/UltimateState.gd" id="10"]
+[ext_resource type="Script" path="res://scripts/combat/BuffComponent.gd" id="11"]
+[ext_resource type="Script" path="res://scripts/combat/fsm/states/StunnedState.gd" id="12"]
+[ext_resource type="Script" path="res://scripts/combat/EquipmentComponent.gd" id="13"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_col"]
+size = Vector2(48, 64)
+
+[node name="BossUnit" type="CharacterBody2D"]
+motion_mode = 1
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1")
+
+[node name="StatsComponent" type="Node" parent="."]
+script = ExtResource("2")
+
+[node name="BuffComponent" type="Node" parent="."]
+script = ExtResource("11")
+
+[node name="EquipmentComponent" type="Node" parent="."]
+script = ExtResource("13")
+
+[node name="TargetingComponent" type="Node" parent="."]
+script = ExtResource("3")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("4")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("5")
+
+[node name="Move" type="Node" parent="StateMachine"]
+script = ExtResource("6")
+
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource("7")
+
+[node name="Dead" type="Node" parent="StateMachine"]
+script = ExtResource("8")
+
+[node name="Skill" type="Node" parent="StateMachine"]
+script = ExtResource("9")
+
+[node name="Ultimate" type="Node" parent="StateMachine"]
+script = ExtResource("10")
+
+[node name="Stunned" type="Node" parent="StateMachine"]
+script = ExtResource("12")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_col")
+
+[node name="Facing" type="Node2D" parent="."]
+
+[node name="Frame" type="Panel" parent="Facing"]
+offset_left = -28.0
+offset_top = -36.0
+offset_right = 28.0
+offset_bottom = 36.0
+
+[node name="Visual" type="ColorRect" parent="Facing"]
+offset_left = -24.0
+offset_top = -32.0
+offset_right = 24.0
+offset_bottom = 32.0
+color = Color(0.84, 0.31, 0.31, 1)
+
+[node name="HPBar" type="ProgressBar" parent="."]
+offset_left = -28.0
+offset_top = -54.0
+offset_right = 28.0
+offset_bottom = -46.0
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="EnergyBar" type="ProgressBar" parent="."]
+offset_left = -28.0
+offset_top = -44.0
+offset_right = 28.0
+offset_bottom = -39.0
+max_value = 1000.0
+value = 0.0
+show_percentage = false
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = -48.0
+offset_top = -76.0
+offset_right = 48.0
+offset_bottom = -56.0
+theme_override_font_sizes/font_size = 13
+text = "Boss"
+horizontal_alignment = 1
